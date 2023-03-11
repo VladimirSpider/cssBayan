@@ -156,6 +156,10 @@ main {
   font-family: 'Oswald-Medium';
  }
 
+ .header p {
+  color: black;
+ }
+
  .header .block-icons {
   opacity: 1;
  }
