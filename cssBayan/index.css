@@ -38,12 +38,16 @@ main {
  font-family: 'Oswald-Bold';
 }
 
-.accordion:hover .header p {
- color: black;
+@media (hover: hover) {
+ .accordion:hover .header p {
+  color: black;
+ }
 }
 
-.accordion:hover .header .block-icons {
- opacity: 1;
+@media (hover: hover) {
+ .accordion:hover .header .block-icons {
+  opacity: 1;
+ }
 }
 
 .accordion-item {
@@ -62,21 +66,23 @@ main {
  cursor: pointer;
 }
 
-.label-item:hover .header .close-book {
- width: 2em;
-}
+@media (hover: hover) {
+ .label-item:hover .header .close-book {
+  width: 2em;
+ }
 
-.label-item:hover .header .open-book {
- width: 0;
-}
+ .label-item:hover .header .open-book {
+  width: 0;
+ }
 
-.label-item:hover > .content {
- height: 350px;
- padding: 2em;
-}
+ .label-item:hover > .content {
+  height: 350px;
+  padding: 2em;
+ }
 
-.label-item:hover > .content img {
- scale: 1;
+ .label-item:hover > .content img {
+  scale: 1;
+ }
 }
 
 .input-item:checked ~ .content {
@@ -151,13 +157,10 @@ main {
   font-size: 2em;
   font-family: 'Oswald-Medium';
  }
+
  .header p {
   font-size: 1.5em;
   font-family: 'Oswald-Medium';
- }
-
- .header p {
-  color: black;
  }
 
  .header .block-icons {
@@ -170,13 +173,16 @@ main {
   font-size: 1.5em;
   font-family: 'Oswald-Light';
  }
+
  .header p {
   font-size: 1em;
   font-family: 'Oswald-Light';
  }
+
  .content img {
   width: 16em;
  }
+
  .header .open-book {
   width: 1.5em;
   height: 1.5em;
