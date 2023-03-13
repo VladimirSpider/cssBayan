@@ -80,7 +80,7 @@ main {
  }
 
  .label-item:hover > .content {
-  height: 350px;
+  height: 20em;
   padding: 2em;
  }
 
@@ -90,7 +90,7 @@ main {
 }
 
 .input-item:checked ~ .content {
- height: 350px;
+ height: 20em;
  padding: 2em;
 }
 
