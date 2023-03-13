@@ -1,0 +1,216 @@
+@font-face {
+ font-family: 'Oswald-Bold';
+ src: url("assets/fonts/oswald/Oswald-Bold.ttf");
+ font-weight: 700;
+}
+
+@font-face {
+ font-family: 'Oswald-Medium';
+ src: url("assets/fonts/oswald/Oswald-Medium.ttf");
+ font-weight: 500;
+}
+
+@font-face {
+ font-family: 'Oswald-Light';
+ src: url("assets/fonts/oswald/Oswald-Light.ttf");
+ font-weight: 300;
+}
+
+body, h1, h2, h3, p {
+ margin: 0;
+ padding: 0;
+}
+
+body::-webkit-scrollbar {
+ width: 0;
+}
+
+main {
+ width: 80vw;
+ min-heigh: 100vh;
+ margin: auto;
+}
+
+.accordion {
+ max-width: 100%;
+ background-color: antiquewhite;
+ padding: 1em;
+}
+
+.accordion h1 {
+ font-size: 3em;
+ font-family: 'Oswald-Bold';
+}
+
+@media (hover: hover) {
+ .accordion:hover .header p {
+  color: black;
+ }
+}
+
+@media (hover: hover) {
+ .accordion:hover .header .block-icons {
+  opacity: 1;
+ }
+}
+
+.accordion-item {
+ margin-top: 1em;
+ border-top: 0.1em solid grey;
+}
+
+.input-item {
+ width: 0;
+ height: 0;
+ appearance: none;
+}
+
+.label-item {
+ display: block;
+ cursor: pointer;
+ transition: 1s;
+}
+
+@media (hover: hover) {
+ .label-item:hover .header .close-book {
+  width: 2em;
+ }
+
+ .label-item:hover .header .open-book {
+  width: 0;
+ }
+
+ .label-item:hover > .content {
+  height: 20em;
+  padding: 2em;
+ }
+
+ .label-item:hover > .content img {
+  scale: 1;
+ }
+}
+
+.input-item:checked ~ .content {
+ height: 20em;
+ padding: 2em;
+}
+
+.label-item:active {
+ opacity: 0.7;
+}
+
+.input-item:active ~ .header p {
+ color: blue;
+}
+
+.input-item:checked ~ .header p {
+ color: black;
+}
+
+.input-item:checked ~ .header .close-book {
+ width: 2em;
+}
+
+.input-item:checked ~ .header .open-book {
+ width: 0;
+}
+
+.input-item:checked ~ .content img {
+ scale: 1;
+}
+
+.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.header p {
+ font-family: 'Oswald-Bold';
+ font-size: 2em;
+ font-weight: bold;
+ color: blue;
+ transition: 1s;
+}
+
+.header .block-icons {
+ opacity: 0;
+ transition: 1s;
+}
+
+.header .open-book {
+ width: 2em;
+ height: 2em;
+ transition: 0.5s;
+}
+
+.header .close-book {
+ width: 0;
+ height: 2em;
+ transition: 0.5s;
+}
+
+.content {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 0;
+ height: 0;
+ overflow: hidden;
+ transition: 0.5s;
+}
+
+.content img {
+ scale: 0.8;
+ transition: 1s;
+}
+
+@media (max-width: 820px) {
+ .accordion h1 {
+  font-size: 2em;
+  font-family: 'Oswald-Medium';
+ }
+
+ .header p {
+  font-size: 1.5em;
+  font-family: 'Oswald-Medium';
+ }
+
+ .header .block-icons {
+  opacity: 1;
+ }
+}
+
+@media (max-width: 500px) {
+ .accordion h1 {
+  font-size: 1.5em;
+  font-family: 'Oswald-Light';
+ }
+
+ .header p {
+  font-size: 1em;
+  font-family: 'Oswald-Light';
+ }
+
+ .content img {
+  width: 16em;
+ }
+
+ .header .open-book {
+  width: 1.5em;
+  height: 1.5em;
+ }
+
+ .header .close-book {
+  width: 0;
+  height: 1.5em;
+ }
+
+ .label-item:hover .header .close-book {
+  width: 1.5em;
+ }
+
+ .input-item:checked ~ .header .close-book {
+  width: 1.5em;
+ }
+}
