@@ -68,6 +68,7 @@ main {
 .label-item {
  display: block;
  cursor: pointer;
+ transition: 1s;
 }
 
 @media (hover: hover) {
@@ -92,6 +93,14 @@ main {
 .input-item:checked ~ .content {
  height: 20em;
  padding: 2em;
+}
+
+.label-item:active {
+ opacity: 0.7;
+}
+
+.input-item:active ~ .header p {
+ color: blue;
 }
 
 .input-item:checked ~ .header p {
